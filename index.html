@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google icon link -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,0" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwindcss link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    
+
+    <!-- link css slider -->
+    <link href="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+    " rel="stylesheet">
+
+    <!-- link css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- title -->
+    <title>Landing-page Bookstore</title>
+</head>
+<body>
+    <!-- main body -->
+    <div class="bg-[#E5E5E5] min-h-screen dark:bg-gray-900">
+
+        <!-- header -->
+        <header class="max-w-[1293px] mx-auto">
+            <!-- flex -->
+            <div class="flex items-center justify-between px-[15px] pt-[36px]">
+                <!-- logo -->
+                <div class="w-44 flex items-center gap-2 cursor-pointer dark:text-white">
+                    <!-- image -->
+                    <figure class="w-full">
+                        <img class="w-full" src="./img/footer logo.svg" alt="">
+                    </figure>
+                    <!-- image end -->
+                </div>
+                <!-- logo end -->
+
+                <!-- navbar -->
+                <nav class="capitalize md:flex hidden items-center gap-[21px]">
+                    <a class="text-[12px] text-[#241400] dark:text-gray-300" href="#">home</a>
+                    <a class="text-[12px] text-[#241400] dark:text-gray-300" href="#">about</a>
+                    <a class="text-[12px] text-[#241400] dark:text-gray-300" href="#">contact</a>
+                    <a class="text-[12px] text-[#241400] dark:text-gray-300" href="#">service</a>
+                    <a class="text-[12px] text-[#241400] dark:text-gray-300" href="#">customer</a>
+                </nav>
+                <!-- navbar end -->
+
+                <!-- searchbar -->
+                <div class="xl:hidden lg:flex md:flex sm:flex hidden items-center gap-1 border-b border-[#696764]">
+                    <span class="text-[#241400] dark:text-gray-200 material-symbols-outlined">
+                        search
+                    </span>
+
+                    <input class="bg-transparent focus:outline-none mb-1 placeholder:text-[#00000059] placeholder:text-[12px] dark:placeholder:text-gray-300" type="text" placeholder="Search here">
+                </div>
+                <!-- searchbar end -->
+
+                <!-- contact -->
+                <div class="xl:flex hidden items-center gap-[19px]">
+                    <span class="text-xs text-[#000000] font-black cursor-pointer dark:text-gray-300">+38 (071) 339-16-26</span>
+
+                    <a href="#" class="inline-block uppercase text-xs text-[#000000] font-normal py-1 px-3 border border-[#9F9F9F] dark:text-gray-200">contact us</a>
+                </div>
+                <!-- contact end -->
+
+                <!-- icon -->
+                <div class="sm:flex hidden items-center space-x-2">
+                    <a class="text-[#E16A00]" href="#">
+                        <span class="text-3xl material-symbols-outlined">
+                            favorite
+                        </span>
+                    </a>
+
+                    <a class="flex items-center gap-2" href="#">
+                        <span class="text-3xl text-[#E16A00] material-symbols-outlined">
+                            shopping_cart
+                        </span>
+
+                        <span class="dark:text-gray-200">
+                            2,228 rph
+                        </span>
+                    </a>
+                </div>
+                <!-- icon end -->
+
+                <!-- menu icon -->
+                <div id="bars" class="md:hidden block cursor-pointer">
+                    <span class="text-[#241400] text-[30px] pt-[7px] dark:text-gray-100 material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
+                <!-- menu icon end -->
+
+                <!-- side bar -->
+                <div id="side" class="block sm:hidden fixed top-0 right-0 bg-[#241400E5] h-screen sm:hidden w-full z-40 transition-all">
+
+                    <!-- close -->
+                    <div class="py-4 px-[15px]">
+                        <div id="close_bars" class="text-right px-[20px] text-white text-[20px] cursor-pointer">
+                            X
+                        </div>
+                    </div>
+                    <!-- close end -->
+
+                    <!-- searchbar -->
+                    <div class="px-[15px]">
+                        <div class="flex items-center gap-1 border-b border-[#69676496] w-full">
+                            <span class="text-[#FFFFFF63]
+                            material-symbols-outlined">
+                                search
+                            </span>
+    
+                            <input class="bg-transparent focus:outline-none mb-1 placeholder:text-[#FFFFFF63] placeholder:text-[12px] text-white" type="text" placeholder="Search here">
+                        </div>
+                    </div>
+                    <!-- searchbar end -->
+
+                    <div class="space-y-[20px] text-right capitalize px-[15px] mt-[20px]">
+                        <!-- single link -->
+                        <a class="block text-white py-1 pr-[11px] hover:text-gray-400 transition" href="#">Home</a>
+                        <!-- single link end -->
+                        <!-- single link -->
+                        <a class="block text-white py-1 pr-[11px] hover:text-gray-400 transition" href="#">about</a>
+                        <!-- single link end -->
+                        <!-- single link -->
+                        <a class="block text-white py-1 pr-[11px] hover:text-gray-400 transition" href="#">contact</a>
+                        <!-- single link end -->
+                        <!-- single link -->
+                        <a class="block text-white py-1 pr-[11px] hover:text-gray-400 transition" href="#">services</a>
+                        <!-- single link end -->
+                        <!-- single link -->
+                        <a class="block text-white py-1 pr-[11px] hover:text-gray-400 transition" href="#">help</a>
+                        <!-- single link end -->
+
+                        
+                    </div>
+                </div>
+                <!-- side bar end -->
+            </div>
+            <!-- flex end -->
+
+            <div class="sm:hidden flex flex-wrap items-center justify-center gap-[10px] px-[15px] pb-[36px] pt-[15px]">
+                <!-- contact -->
+                <div class="flex items-center gap-[19px]">
+                    <span class="text-xs text-[#000000] font-black cursor-pointer dark:text-gray-300">+38 (071) 339-16-26</span>
+
+                    <a href="#" class="inline-block uppercase text-xs text-[#000000] font-normal py-1 px-3 border border-[#9F9F9F] dark:text-gray-200">contact us</a>
+                </div>
+                <!-- contact end -->
+
+                <!-- icon -->
+                <div class="flex items-center gap-2">
+                    <a class="text-[#E16A00]" href="#">
+                        <span class="text-3xl material-symbols-outlined">
+                            favorite
+                        </span>
+                    </a>
+
+                    <a class="flex items-center gap-2" href="#">
+                        <span class="text-3xl text-[#E16A00] material-symbols-outlined">
+                            shopping_cart
+                        </span>
+
+                        <span class="dark:text-gray-200">
+                            2,228 rph
+                        </span>
+                    </a>
+                </div>
+                <!-- icon end -->
+            </div>
+        </header>
+        <!-- header end -->
+
+        <!-- container -->
+        <div class="max-w-[1293px] mx-auto">
+            <!-- home -->
+            <div class="px-[15px]">
+                <div class="grid lg:grid-cols-2 md:grid-cols-2 items-center px-[15px] space-y-5 relative">
+                    <!-- content -->
+                    <div class="col-span-1 md:text-left text-center">
+                        <h2 class="uppercase text-[#241400] text-[36px] font-black dark:text-gray-100">Lorem ipsum</h2>
+                        <p class="my-[16px] text-[13px] text-[#241400] sm:mr-[75px] font-normal dark:text-gray-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sunt quis eos impedit, provident illo id ducimus obcaecati odio ipsum rem optio? Nesciunt debitis magnam esse perspiciatis quis non voluptate.</p>
+
+                        <a class="inline-block uppercase bg-[#E16A00] text-[#FFFFFF] text-[15px] py-[11px] px-[24px]" href="#">Learn More</a>
+                    </div>
+                    <!-- content end -->
+
+                    <!-- image -->
+                    <div class="col-span-1 bg-img relative">
+                        <!-- slider -->
+                        <div class="mb-3 absolute top-[63px] lg:-left-[45px] md:-left-[35px] left-0">
+                            <!-- slider img -->
+                            <section class="splide" aria-labelledby="carousel-heading">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <!-- content -->
+                                            <div class="w-full">
+                                                <div class="max-w-[562px]">
+                                                    <img class="w-full" src="./img/image 1.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <!-- content end -->
+                                        </li>
+                                        <li class="splide__slide">
+                                            <!-- content -->
+                                            <div class="w-full">
+                                                <div class="max-w-[562px]">
+                                                    <img class="w-full" src="./img/image 1.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <!-- content end -->
+                                        </li>
+                                        <li class="splide__slide">
+                                            <!-- content -->
+                                            <div class="w-full">
+                                                <div class="max-w-[562px]">
+                                                    <img class="w-full" src="./img/image 1.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <!-- content end -->
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <!-- slider img end -->
+                        </div>
+                        <!-- slider end -->
+                    </div>
+                    <!-- image end -->
+
+                    <div class="absolute lg:right-[159px] md:right-[50px] sm:right-[110px] right-[80px] -bottom-[20px] bg-[#4D2900] pb-[20px] px-5">
+                        <h2 class="text-white text-[15px] uppercase mb-[5px] font-black">Lorem ipsum dolor sit amet.</h2>
+                        <p class="text-white text-[15px] font-normal">Lorem ipsum dolor sit amet, consectetur <br> adipisicing elit. be
+                        Qui, sequi? consectetur</p>
+                        <div class="flex items-center pt-[5px]">
+                            <span class="text-white text-[12px] uppercase">669 pric</span>
+                            <span class="material-symbols-outlined ml-auto text-white cursor-pointer">
+                                arrow_right_alt
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- home end -->
+
+            <!-- books -->
+            <div class="mt-[120px] px-[15px] pb-[30px]">
+                <!-- grid -->
+                <div class="grid lg:grid-cols-5 md:grid-cols-5 pb-[35px]">
+                    <!-- grid items -->
+                    <div class="lg:col-span-2 md:col-span-2">
+                        <h2 class="uppercase text-[25px] dark:text-gray-100 font-black">Lorem ipsum dolor sit</h2>
+                    </div>
+                    <!-- grid items end -->
+
+                    <!-- grid items -->
+                    <div class="lg:col-span-3 md:col-span-3">
+                        <a class="text-[13px] text-[#241400] mr-[40px] font-normal dark:text-gray-200" href="#">Best Books</a>
+                        <a class="text-[13px] text-[#241400] mr-[40px] font-normal dark:text-gray-200" href="#">Best Books</a>
+                        <a class="text-[13px] text-[#241400] mr-[40px] font-normal dark:text-gray-200" href="#">Best Books</a>
+                        <a class="text-[13px] text-[#241400] mr-[40px] font-normal dark:text-gray-200" href="#">Best Books</a>
+                        <a class="text-[13px] text-[#241400] mr-[40px] font-normal dark:text-gray-200" href="#">Best Books</a>
+                        <a class="text-[13px] text-[#241400] font-normal dark:text-gray-200" href="#">Best Books</a>
+                    </div>
+                    <!-- grid items end -->
+                </div>
+                <!-- grid end -->
+
+                <!-- slider -->
+                <div class="flex items-center cursor-pointer overflow-hidden gap-[42px]">
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 dark:bg-gray-800">
+                        <div class="mb-4 w-full flex items-center justify-center">
+                            <img src="./img/image 2.svg" alt="">
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="text-lg text-[#241400] font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 dark:bg-gray-800">
+                        <div class="card-image w-full flex items-center justify-center">
+                            <img src="./img/image 3.svg" alt="">
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 dark:bg-gray-800">
+                        <div class="card-image w-full flex items-center justify-center">
+                            <img src="./img/image 4.svg" alt="">
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 dark:bg-gray-800">
+                        <div class="card-image w-full flex items-center justify-center">
+                            <img src="./img/image 5.svg" alt="">
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 dark:bg-gray-800">
+                        <div class="card-image w-full flex items-center justify-center">
+                            <img src="./img/image 6.svg" alt="">
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    
+                </div>
+                <!-- slider end -->
+                
+            </div>
+            <!-- books end -->
+
+            <!-- books -->
+            <div class="px-[15px] pb-[30px]">
+
+                <!-- title -->
+                <div class="py-[50px] text-center">
+                    <h2 class="text-[25px] text-[#241400] font-black uppercase dark:text-gray-100">Best Books</h2>
+                </div>
+                <!-- title end -->
+                <!-- slider -->
+                <div class="flex items-center cursor-pointer overflow-hidden gap-[42px]">
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 dark:bg-gray-800">
+                        <div class="card-image w-full flex items-center justify-center">
+                            <img src="./img/image 2.svg" alt="">
+                        </div>
+
+                        <div class="card-content relative">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+
+                            <div class="absolute -top-[10px] right-0">
+                                <span class="text-[#D70000] text-[15px] font-normal"><del>100 rph</del></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 dark:bg-gray-800">
+                        <div class="card-image w-full flex items-center justify-center">
+                            <img src="./img/image 3.svg" alt="">
+                        </div>
+
+                        <div class="card-content relative">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+
+                            <div class="absolute -top-[10px] right-0">
+                                <span class="text-[#D70000] text-[15px] font-normal"><del>100 rph</del></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 dark:bg-gray-800">
+                        <div class="card-image w-full flex items-center justify-center">
+                            <img src="./img/image 4.svg" alt="">
+                        </div>
+
+                        <div class="card-content relative">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+
+                            <div class="absolute -top-[10px] right-0">
+                                <span class="text-[#D70000] text-[15px] font-normal"><del>100 rph</del></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 dark:bg-gray-800">
+                        <div class="card-image w-full flex items-center justify-center">
+                            <img src="./img/image 5.svg" alt="">
+                        </div>
+
+                        <div class="card-content relative">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+
+                            <div class="absolute -top-[10px] right-0">
+                                <span class="text-[#D70000] text-[15px] font-normal"><del>100 rph</del></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 dark:bg-gray-800">
+                        <div class="card-image w-full flex items-center justify-center">
+                            <img src="./img/image 6.svg" alt="">
+                        </div>
+
+                        <div class="card-content relative">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+
+                            <div class="absolute -top-[10px] right-0">
+                                <span class="text-[#D70000] text-[15px] font-normal"><del>100 rph</del></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    
+                </div>
+                <!-- slider end -->
+            </div>
+            <!-- books end -->
+
+            <!-- books -->
+            <div class="px-[15px] pb-[30px]">
+
+                <!-- title -->
+                <div class="py-[50px] text-center">
+                    <h2 class="text-[25px] text-[#241400] font-black uppercase dark:text-gray-100">top collection</h2>
+                </div>
+                <!-- title end -->
+                <!-- slider -->
+                <div class="flex items-center cursor-pointer overflow-hidden gap-[42px] mb-[42px]">
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 drop-shadow-lg dark:bg-gray-800">
+                        <div class="mb-4 w-full flex items-center justify-center">
+                            <img src="./img/image 2.svg" alt="">
+                        </div>
+
+                        <div class="card-content relative">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+
+                            <div class="absolute -top-[10px] right-0">
+                                <span class="text-[#D70000] text-[15px] font-normal"><del>100 rph</del></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 drop-shadow-lg dark:bg-gray-800">
+                        <div class="mb-4 w-full flex items-center justify-center">
+                            <img src="./img/image 3.svg" alt="">
+                        </div>
+
+                        <div class="card-content relative">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+
+                            <div class="absolute -top-[10px] right-0">
+                                <span class="text-[#D70000] text-[15px] font-normal"><del>100 rph</del></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 drop-shadow-lg dark:bg-gray-800">
+                        <div class="mb-4 w-full flex items-center justify-center">
+                            <img src="./img/image 4.svg" alt="">
+                        </div>
+
+                        <div class="card-content relative">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+
+                            <div class="absolute -top-[10px] right-0">
+                                <span class="text-[#D70000] text-[15px] font-normal"><del>100 rph</del></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 drop-shadow-lg dark:bg-gray-800">
+                        <div class="mb-4 w-full flex items-center justify-center">
+                            <img src="./img/image 5.svg" alt="">
+                        </div>
+
+                        <div class="card-content relative">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+
+                            <div class="absolute -top-[10px] right-0">
+                                <span class="text-[#D70000] text-[15px] font-normal"><del>100 rph</del></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                </div>
+                <!-- slider end -->
+
+                <!-- slider -->
+                <div class="flex items-center cursor-pointer overflow-hidden gap-[42px]">
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 drop-shadow-lg dark:bg-gray-800">
+                        <div class="mb-4 w-full flex items-center justify-center">
+                            <img src="./img/image 2.svg" alt="">
+                        </div>
+
+                        <div class="card-content relative">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+
+                            <div class="absolute -top-[10px] right-0">
+                                <span class="text-[#D70000] text-[15px] font-normal"><del>100 rph</del></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 drop-shadow-lg dark:bg-gray-800">
+                        <div class="mb-4 w-full flex items-center justify-center">
+                            <img src="./img/image 3.svg" alt="">
+                        </div>
+
+                        <div class="card-content relative">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+
+                            <div class="absolute -top-[10px] right-0">
+                                <span class="text-[#D70000] text-[15px] font-normal"><del>100 rph</del></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 drop-shadow-lg dark:bg-gray-800">
+                        <div class="mb-4 w-full flex items-center justify-center">
+                            <img src="./img/image 4.svg" alt="">
+                        </div>
+
+                        <div class="card-content relative">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+
+                            <div class="absolute -top-[10px] right-0">
+                                <span class="text-[#D70000] text-[15px] font-normal"><del>100 rph</del></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                    <!-- single card -->
+                    <div class="bg-white p-[25px] grow shrink-0 drop-shadow-lg dark:bg-gray-800">
+                        <div class="mb-4 w-full flex items-center justify-center">
+                            <img src="./img/image 5.svg" alt="">
+                        </div>
+
+                        <div class="card-content relative">
+                            <h2 class="text-lg text-[#241400]  font-bold pb-[5px] uppercase dark:text-gray-200">300 RPH</h2>
+                            <h5 class="text-xs text-[#241400] uppercase font-black dark:text-gray-300">Hasan ali</h5>
+                            <p class="font-normal text-[12px] text-[#241400] dark:text-gray-300">Lorem, ipsum Etc.</p>
+
+                            <div class="flex items-center mt-[10px]">
+                                <button type="button" class="text-xs uppercase font-black text-white bg-[#E16A00] px-[11px] py-[10px]">Shop Now</button>
+                                <span class="material-symbols-outlined ml-auto text-3xl cursor-pointer dark:text-gray-200">
+                                    favorite
+                                </span>
+                            </div>
+
+                            <div class="absolute -top-[10px] right-0">
+                                <span class="text-[#D70000] text-[15px] font-normal"><del>100 rph</del></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single card end -->
+                </div>
+                <!-- slider end -->
+            </div>
+            <!-- books end -->
+
+            <!-- service -->
+            <div class="px-[15px] pb-[30px]">
+
+                <!-- title -->
+                <div class="py-[50px] text-center">
+                    <h2 class="text-[25px] text-[#241400] font-black uppercase dark:text-gray-100">tekct</h2>
+                </div>
+                <!-- title end -->
+
+                <!-- grid -->
+                <div class="flex flex-wrap lg:gap-[36px] gap-[33px] items-center text-center justify-center">
+                    <div class="space-y-[36px] w-[222px]">
+                        <div class="card bg-white py-[25px] max-w-[222px] drop-shadow-lg rounded-[10px] dark:bg-gray-800">
+                            <h2 class="text-base text-[#241400] font-blod uppercase dark:text-gray-200">Lorem, ipsum.</h2>
+                        </div>
+                        <div class="card bg-white py-[25px] max-w-[222px] drop-shadow-lg rounded-[10px] dark:bg-gray-800">
+                            <h2 class="text-base text-[#241400] font-blod uppercase dark:text-gray-200">Lorem, ipsum.</h2>
+                        </div>
+                        <div class="card bg-white py-[25px] max-w-[222px] drop-shadow-lg rounded-[10px] dark:bg-gray-800">
+                            <h2 class="text-base text-[#241400] font-blod uppercase dark:text-gray-200">Lorem, ipsum.</h2>
+                        </div>
+                    </div>
+                    <div class="space-y-[36px] w-[222px]">
+                        <div class="card bg-white py-[25px] max-w-[222px] drop-shadow-lg rounded-[10px] dark:bg-gray-800">
+                            <h2 class="text-base text-[#241400] font-blod uppercase dark:text-gray-200">Lorem, ipsum.</h2>
+                        </div>
+                        <div class="card bg-white py-[25px] max-w-[222px] drop-shadow-lg rounded-[10px] dark:bg-gray-800">
+                            <h2 class="text-base text-[#241400] font-blod uppercase dark:text-gray-200">Lorem, ipsum.</h2>
+                        </div>
+                        <div class="card bg-white py-[25px] max-w-[222px] drop-shadow-lg rounded-[10px] dark:bg-gray-800">
+                            <h2 class="text-base text-[#241400] font-blod uppercase dark:text-gray-200">Lorem, ipsum.</h2>
+                        </div>
+                    </div>
+                    <div class="space-y-[36px] w-[222px]">
+                        <div class="card bg-white py-[25px] max-w-[222px] drop-shadow-lg rounded-[10px] dark:bg-gray-800">
+                            <h2 class="text-base text-[#241400] font-blod uppercase dark:text-gray-200">Lorem, ipsum.</h2>
+                        </div>
+                        <div class="card bg-white py-[25px] max-w-[222px] drop-shadow-lg rounded-[10px] dark:bg-gray-800">
+                            <h2 class="text-base text-[#241400] font-blod uppercase dark:text-gray-200">Lorem, ipsum.</h2>
+                        </div>
+                        <div class="card bg-white py-[25px] max-w-[222px] drop-shadow-lg rounded-[10px] dark:bg-gray-800">
+                            <h2 class="text-base text-[#241400] font-blod uppercase dark:text-gray-200">Lorem, ipsum.</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- grid end -->
+            </div>
+            <!-- service end -->
+
+            <!-- number -->
+            <div class="px-[15px] pb-[30px]">
+
+                <!-- title -->
+                <div class="py-[50px] text-center">
+                    <h2 class="text-[25px] text-[#241400] font-black uppercase dark:text-gray-100">Lorem, ipsum.</h2>
+                </div>
+                <!-- title end -->
+                <!-- grid -->
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 items-center gap-[30px]">
+                    <!-- single box -->
+                    <div class="flex items-center gap-[25px] mx-auto">
+                        <span class="text-[50px] font-black text-[#241400] dark:text-gray-200">35</span>
+                        <p class="text-[13px] font-normal text-[#241400] dark:text-gray-300">Lorem, ipsum.</p>
+                    </div>
+                    <!-- single box end -->
+                    <!-- single box -->
+                    <div class="flex items-center gap-[25px] mx-auto">
+                        <span class="text-[50px] font-black text-[#241400] dark:text-gray-200">898</span>
+                        <p class="text-[13px] font-normal text-[#241400] dark:text-gray-300">Lorem, ipsum.</p>
+                    </div>
+                    <!-- single box end -->
+                    <!-- single box -->
+                    <div class="flex items-center gap-[25px] mx-auto">
+                        <span class="text-[50px] font-black text-[#241400] dark:text-gray-200">8659</span>
+                        <p class="text-[13px] font-normal text-[#241400] dark:text-gray-300">Lorem, ipsum.</p>
+                    </div>
+                    <!-- single box end -->
+                    <!-- single box -->
+                    <div class="flex items-center gap-[25px] mx-auto">
+                        <span class="text-[50px] font-black text-[#241400] dark:text-gray-200">72</span>
+                        <p class="text-[13px] font-normal text-[#241400] dark:text-gray-300">Lorem, ipsum.</p>
+                    </div>
+                    <!-- single box end -->
+                </div>
+                <!-- grid end -->
+            </div>
+            <!-- number end -->
+
+            <!-- some text -->
+            <div class="px-[15px] pb-[30px]">
+                <!-- title -->
+                <div class="py-[50px] text-center">
+                    <h2 class="text-[25px] text-[#241400] font-black uppercase dark:text-gray-100">ipsum</h2>
+                </div>
+                <!-- title end -->
+
+                <div class="text-center">
+                    <p class="text-xs text-[#241400] font-normal dark:text-gray-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, a voluptas at quam iusto nemo deserunt magni voluptates commodi animi asperiores dolorum incidunt totam architecto libero doloremque temporibus nam quos ipsa sequi qui! Ad minima praesentium quae omnis sit aliquam recusandae nam assumenda labore at mollitia, eveniet, vero dolor fugiat voluptate animi nihil beatae quo? Eaque dicta perspiciatis aut? Voluptatibus excepturi sunt at, quod enim nemo tempore fugiat?</p>
+                </div>
+            </div>
+            <!-- some text end -->
+
+            <!-- social link -->
+            <div class="px-[15px] pb-[50px]">
+                <!-- title -->
+                <div class="py-[50px] text-center">
+                    <h2 class="text-[25px] text-[#241400] font-black uppercase dark:text-gray-100">Lorem, ipsum dolor.</h2>
+                </div>
+                <!-- title end -->
+
+                <div class="flex items-center justify-center gap-[11px]">
+                    <a class="cursor-pointer dark:bg-gray-200" href="#">
+                        <img src="./img/Vector (2).svg" alt="">
+                    </a>
+                    <a class="cursor-pointer dark:bg-gray-200" href="#">
+                        <img src="./img/Vector (3).svg" alt="">
+                    </a>
+                    <a class="cursor-pointer dark:bg-gray-200" href="#">
+                        <img src="./img/Vector (4).svg" alt="">
+                    </a>
+                    <a class="cursor-pointer dark:bg-gray-200" href="#">
+                        <img src="./img/Vector (5).svg" alt="">
+                    </a>
+                    <a class="cursor-pointer dark:bg-gray-200" href="#">
+                        <img src="./img/Vector (6).svg" alt="">
+                    </a>
+                    <a class="cursor-pointer dark:bg-gray-200" href="#">
+                        <img src="./img/Vector (7).svg" alt="">
+                    </a>
+                    <a class="cursor-pointer dark:bg-gray-200" href="#">
+                        <img src="./img/Vector (8).svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- social link end -->
+        </div>
+        <!-- container end -->
+
+        <!-- footer -->
+        <div class="px-[15px] py-[25px] bg-[#391F00]">
+            <div class="max-w-[1293px] mx-auto ">
+                <!-- grid -->
+                <div class="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-4 items-center gap-[21px] pb-[25px]">
+                    <div class="lg:col-span-1 md:col-span-1 sm:col-span-1 mx-auto">
+                        <figure class="text-white">
+                            <img src="./img/footer logo.svg" alt="">
+                        </figure>
+                    </div>
+                    <!-- navbar -->
+                    <div class="lg:col-span-2 md:col-span-2 sm:col-span-2 mx-auto">
+                        <nav class="capitalize flex items-center gap-[21px]">
+                            <a class="text-xs font-normal text-[#F2F2F2]" href="#">home</a>
+                            <a class="text-xs font-normal text-[#F2F2F2]" href="#">about</a>
+                            <a class="text-xs font-normal text-[#F2F2F2]" href="#">contact</a>
+                            <a class="text-xs font-normal text-[#F2F2F2]" href="#">service</a>
+                            <a class="text-xs font-normal text-[#F2F2F2]" href="#">customer</a>
+                        </nav>
+                    </div>
+                    <!-- navbar end -->
+                    <!-- support -->
+                    <div class="lg:col-span-1 md:col-span-1 sm:col-span-1 mx-auto">
+                        <span class="text-xs text-white">+38 (071) 339-16-26</span>
+                        <a href="#" class="block text-center mt-2 text-xs text-[#E16A00] py-2 px-1 border border-[#E16A00] w-full uppercase">contact us</a>
+                    </div>
+                    <!-- support end -->
+                </div>
+                <!-- grid end -->
+
+                <!-- grid -->
+                <div class="xl:flex xl:gap-[100px] lg:grid md:grid sm:grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 hidden items-center xl:justify-center gap-[21px]">
+                    <div class="col-span-1 xl:mx-0 lg:mx-auto">
+                        <h2 class="text-lg text-white font-normal">Lorem, ipsum.</h2>
+                        <ul>
+                            <li class="text-xs text-white font-normal py-[5px]">lorem</li>
+                            <li class="text-xs text-white font-normal py-[5px]">Lorem, ipsum.</li>
+                            <li class="text-xs text-white font-normal py-[5px]">Lorem, ipsum dolor.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-span-1 xl:mx-0 lg:mx-auto">
+                        <h2 class="text-lg text-white font-normal">Lorem, ipsum.</h2>
+                        <ul>
+                            <li class="text-xs text-white font-normal py-[5px]">lorem</li>
+                            <li class="text-xs text-white font-normal py-[5px]">Lorem, ipsum.</li>
+                            <li class="text-xs text-white font-normal py-[5px]">Lorem, ipsum dolor.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-span-1 xl:mx-0 lg:mx-auto">
+                        <h2 class="text-lg text-white font-normal">Lorem, ipsum.</h2>
+                        <ul>
+                            <li class="text-xs text-white font-normal py-[5px]">lorem</li>
+                            <li class="text-xs text-white font-normal py-[5px]">Lorem, ipsum.</li>
+                            <li class="text-xs text-white font-normal py-[5px]">Lorem, ipsum dolor.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- grid end -->
+
+                <div class="lg:hidden md:hidden sm:hidden block text-center">
+                    <div class="mb-2">
+                        <p class="text-xs text-white font-normal mb-2">Lorem, ipsum dolor. &copy; 2003-2021</p>
+                        <h3 class="text-base uppercase text-white font-normal">Lorem, ipsum.</h3>
+                    </div>
+                    <div class="mb-2">
+                        <p class="text-xs text-white font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer end -->
+    </div>
+    <!-- main body end -->
+
+    <!-- link slider -->
+    <script src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+    "></script>
+
+    <!-- link main js -->
+    <script src="./app.js"></script>
+</body>
+</html>
